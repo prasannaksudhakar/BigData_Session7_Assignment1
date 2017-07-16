@@ -1,0 +1,39 @@
+1. Why Map-reduce program is needed in Pig Programming?
+   Pig runs on Hadoop. It makes use of both the Hadoop Distributed File System, HDFS, and Hadoop’s processing system, MapReduce.
+
+2. What are advantages of pig over MapReduce?
+   • MapReduce requires Java knowledge whereas Pig is high level language java is not necessary.
+   • Pig has inbuilt functions/opertors, such as join, filter, group by, order by, union, etc.
+   • Functions/Operations which can be performed using 8 to 9 lines of code in pig, In MapReduce it requires hundred lines of code.
+
+3. What is pig engine and what is its importance?
+   Pig provides an engine for executing data flows in parallel on Hadoop. It includes a language, Pig Latin, for expressing these data flows.
+
+4. What are the modes of Pig execution?
+   We can run pig in 2 modes
+   1. MapReduce/Hadoop Mode: 
+      • Here Pig jobs run as a series of MapReduce jobs picking the input and output paths from HDFS.
+      • Type the command pig or pig –x mapreduce to run Pig in MapReduce Mode.
+      • Input file has to be copied in HDFS in case of Map reduce mode.
+
+   2. Local Mode: 
+      • Here the entire Pig job runs as a single JVM picking the local Unix path for execution.
+      • Type the command pig or pig -x local to run Pig in Local Mode.   
+      • Input file has to be kept in local file system in case of local mode.
+
+5. What is grunt shell in Pig?
+   • Interactive Shell for executing Pig Commands.
+   • Used when script file is not provided.
+   • Can execute scripts from Grunt via run or exec commands
+
+6. What are the features of Pig Latin language?
+   • Pig Latin includes operators for many of the traditional data operations (join, sort, filter, etc.), as well as the ability for users to develop their own functions for reading, processing, and writing.
+   • Pig Latin script describes a directed acyclic graph (DAG), where the edges are data flows and the nodes are operators that process the data.
+   • Pig Latin provides all of the standard data-processing operations, such as join, filter, group by, order by, union, etc.
+   • In Pig Latin joins and ordering codes comprise of 8-9 lines of code and take few minutes to write and debug. The same code in MapReduce will span hundred lines of code and takes hours to develop.
+
+7. Is Pig latin commands case sensitive?
+   No
+
+8. What is a data flow language?
+   Pig Latin, It shows users exactly the data flow, without forcing them to either think inside out or construct a set of temporary tables and manage how those tables are used between different SQL queries. 
